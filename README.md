@@ -1,8 +1,6 @@
 # Graph Challenge
 ## Algorithm
-The ownership structure is a sparse graph. Such graphs, due to their low edge count, are best represented using specific data structures that optimize storage and traversal. A sparse graph are ideally represented by an adjacency list. In an adjacency list, each vertex maintains a list of adjacent vertices it is directly connected to.
-
-The optimum algorithm for analyse the ownership structure is a recursive [Depth-First Search](https://en.wikipedia.org/wiki/Depth-first_search) (DFS).
+The ownership structure is a sparse graph. Such graphs, due to their low edge count, are best represented using specific data structures that optimise storage and traversal. A sparse graph is ideally represented by an adjacency list. In an adjacency list, each vertex maintains a list of adjacent vertices it is directly connected to. A recursive implementation of the [Depth-First Search](https://en.wikipedia.org/wiki/Depth-first_search) (DFS) algorithm is optimal for analysing the ownership structure.
 
 ### Time complexity
  $O(V+E)$
@@ -15,8 +13,14 @@ where
 * DFS: $O(V)$ (for the recursion stack in worst case, when the graph is a linear chain)
 * Adjacency list storage: $O(V+E)$
 
+
+## Todo
+* Tests
+* Error handling (only happy flow currently implemented)
+* For a more full-blown DDD implementation, one could use services injected via dependency injection
+
 ## Run
-### With 
+### With UV
 Install [UV](https://docs.astral.sh/uv):
 ```
 brew install uv
